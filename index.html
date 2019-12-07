@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>http_demo</title>
+</head>
+<body>
+<p id="warning" hidden>
+</p>
+<div id="infos" hidden="hidden">
+</div>
+<input style="margin-top: 5vh;
+  width: 100px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  color: #000000;
+  padding-left: 10px" type="text" id="nick" value="" placeholder="昵称" />
+<button type="button" id="in" >进入聊天室</button>
+<input type="text" id="message" value="" placeholder="请输入您想说的话" hidden/>
+<button type="button" id="send_btn" hidden>发送</button>
+</body>
+<script>
+    document.getElementById("in").onclick = function (){
+        const MessageTypeEnum = {
+            NORMAL: 0,
+            LOGIN: 1,
+            STATS: 2,
+            POPULAR: 3
+        }
+        const ws = new WebSocket('ws://127.0.0.1:1125');
+        const username =  document.getElementById("nick").value
+        if(!username){
+            const infos = document.getElementById("warning")
+            infos.hidden = false;
+            infos.innerText = "用户名不能为空";
+        }else{
+            // 创建了一个客户端的socket,然后让这个客户端去连接服务器的socket
+             ws.onopen = function(e){
+                 var obj = {username:username,message:"进入聊天室",type:MessageTypeEnum.LOGIN}
+                 var str = JSON.stringify(obj)
+                ws.send(str);
+                document.getElementById("in").remove();
+                document.getElementById("nick").remove();
+                const message = document.getElementById("message");
+                const send_btn = document.getElementById("send_btn");
+                const infos = document.getElementById("infos");
+                infos.hidden = false;
+                message.hidden = false;
+                send_btn.hidden = false;
+                send_btn.onclick = function(){
+                    var arr = message.value.toString().split(" ")
+                    var message_type = getMessageType(arr[0],MessageTypeEnum)
+                    var context=""
+                    if(message_type!=0){
+                        arr.shift()
+                        context = arr.join(" ")
+                    }else{
+                        context = arr.join(" ")
+                    }
+                    var obj = {username:username,message:context,type:message_type,time:Date.now()}
+                    var str = JSON.stringify(obj)
+                    ws.send(str)
+                 }
+            };
+            ws.onmessage = function (data) {
+                var h6 = document.createElement('h6');
+                h6.innerText = `${data.data}`;
+               document.getElementById("infos").append(h6);
+            };
+            ws.onclose = function () {
+                console.log("leave");
+            };
+            ws.onerror = function (err) {
+                console.log(err);
+            };
+        }
+    };
+    function getMessageType(messagePre,MessageTypeEnum) {
+            switch (messagePre) {
+                case "/stats":
+                    return MessageTypeEnum.STATS;
+                case "/popular":
+                    return MessageTypeEnum.POPULAR;
+                default:
+                    return 0;
+            }
+    }
+</script>
+<style>
+    body {
+        background: #307ac6;
+        text-align: center;
+        color: aliceblue;
+        margin: 0% 10%
+    }
+    p {
+        font-size: 2rem
+    }
+    input {
+        margin-top: 5vh;
+        width: 200px;
+        height: 40px;
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+        color: #000000;
+        padding-left: 10px;
+    }
+    button {
+        border: none;
+        background: #ffffff;
+        border-radius: 4px;
+        width: 90px;
+        height: 42px;
+        color: #000000;
+    }
+    #infos {
+        margin-left: 25vw;
+        width: 400px;
+        height: 500px;
+        overflow: scroll;
+        border: none;
+        background: #ffffff;
+        color: #000000;
+    }
+</style>
+</html>
