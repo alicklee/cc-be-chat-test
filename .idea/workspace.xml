@@ -6,13 +6,12 @@
       <change afterPath="$PROJECT_DIR$/cache/chatter.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cache/history.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cache/popular.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatServer.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/enum/MessageTypeEnum.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/chatServer.test.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/utils/timer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/chatServer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/ansi-escapes/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/ansi-escapes/license" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/ansi-escapes/package.json" beforeDir="false" />
@@ -4894,7 +4893,10 @@
       <recent name="G:\Personal\nodejs\cc-be-chat-test" />
     </key>
   </component>
-  <component name="RunManager" selected="Mocha.queue">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cc-be-chat-test/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="NodeJSConfigurationType" path-to-node="C:/Program Files/nodejs/node">
       <method v="2" />
     </configuration>
@@ -4943,21 +4945,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="popular test" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>SUITE</test-kind>
-      <test-file>$PROJECT_DIR$/test/chatServer.test.js</test-file>
-      <test-names>
-        <name value="popular test" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="queue" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -4975,11 +4962,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Mocha.queue" />
         <item itemvalue="Mocha.filter" />
         <item itemvalue="Mocha.MessageTypeEnum test" />
         <item itemvalue="Mocha.config test" />
-        <item itemvalue="Mocha.popular test" />
       </list>
     </recent_temporary>
   </component>
@@ -5005,7 +4992,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575708839939</updated>
-      <workItem from="1575708844084" duration="51639000" />
+      <workItem from="1575708844084" duration="51995000" />
     </task>
     <servers />
   </component>
@@ -5033,22 +5020,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1575708937641" />
-    <state width="1899" height="347" key="GridCell.Tab.0.bottom" timestamp="1575760577044">
+    <state width="1899" height="347" key="GridCell.Tab.0.bottom" timestamp="1575761360831">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575760577044" />
-    <state width="1899" height="347" key="GridCell.Tab.0.center" timestamp="1575760577043">
+    <state width="1899" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575761360831" />
+    <state width="1899" height="347" key="GridCell.Tab.0.center" timestamp="1575761360830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575760577043" />
-    <state width="1899" height="347" key="GridCell.Tab.0.left" timestamp="1575760577043">
+    <state width="1899" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575761360830" />
+    <state width="1899" height="347" key="GridCell.Tab.0.left" timestamp="1575761360830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575760577043" />
-    <state width="1899" height="347" key="GridCell.Tab.0.right" timestamp="1575760577044">
+    <state width="1899" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575761360830" />
+    <state width="1899" height="347" key="GridCell.Tab.0.right" timestamp="1575761360831">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575760577044" />
+    <state width="1899" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575761360831" />
     <state width="1899" height="414" key="GridCell.Tab.1.bottom" timestamp="1575751120234">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -92,7 +92,7 @@ function login_handler(username,client_sock) {
 }
 
 //stats处理函数
-function stats_handler(message) {
+function stats_handler(message,client_sock) {
     var username = message;
     var res = Chatter.OnlinTime(username)
     if(res!=null){
