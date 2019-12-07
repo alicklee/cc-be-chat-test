@@ -1,4 +1,5 @@
-run `node index.js` in terminal to run the chat client
+run `npm start` to start up server
+open index.html to get client UI
 
 
 ##nmp package add
