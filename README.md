@@ -23,4 +23,4 @@ open index.html to get client UI
     A framework for testing corver
     ````
 ##思维导图
-![Image text](./Chat+System.png)
+![Image text](https://github.com/alicklee/cc-be-chat-test/blob/master/Chat%2BSystem.png)
